@@ -34,6 +34,11 @@ function App() {
     setCalc(value);
   };
 
+  const deleteCalc = () => {
+    setCalc("");
+    setResult("");
+  };
+
   return (
     <div className="App">
       <section className="calculator">
@@ -41,7 +46,7 @@ function App() {
           {result ? <span>({result})</span> : ""}
           {calc || "0"}
         </div>
-        <Operators updateCalc={updateCalc} deleteLast={deleteLast} />
+        <Operators updateCalc={updateCalc} deleteCalc={deleteCalc} deleteLast={deleteLast}  />
         <div className="digits">
           <Digits updateCalc={updateCalc} />
           <button onClick={() => updateCalc("0")}>0</button>
