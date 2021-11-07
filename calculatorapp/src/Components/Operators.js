@@ -1,13 +1,13 @@
 import React from "react";
 
-function Operators() {
+function Operators({ updateCalc, deleteLast }) {
   return (
     <div className="operators">
-      <button>/</button>
-      <button>*</button>
-      <button>+</button>
-      <button>-</button>
-      <button>DEL</button>
+      <button onClick={() => updateCalc("/")}>/</button>
+      <button onClick={() => updateCalc("*")}>*</button>
+      <button onClick={() => updateCalc("+")}>+</button>
+      <button onClick={() => updateCalc("-")}>-</button>
+      <button onClick={() => deleteLast()}>DEL</button>
     </div>
   );
 }

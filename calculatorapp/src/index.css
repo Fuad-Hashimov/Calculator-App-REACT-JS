@@ -18,6 +18,7 @@ body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
+  padding: 10px;
 }
 .calculator {
   width: 100%;
@@ -38,6 +39,7 @@ body {
 .display span {
   font-size: 14px;
   color: #888;
+  padding-right:10px;
 }
 button {
   appearance: none;
